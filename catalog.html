@@ -27,8 +27,101 @@
     	<section>
     		<h2>Шаблоны</h2>
 
-    		<!-- Форма -->
+    		<section>
+                <h3>Фильтр</h3>
+
+                <form action="https://echo.htmlacademy.ru" method="get">
+                    <fieldset>
+                        <legend>Стоимость:</legend>
+                        <div>
+                            <div class="range">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <p>
+                            <label for="min">От</label>
+                            <input id="min" name="min" placeholder="0" type="text">
+                        </p>
+                        <p>
+                            <label for="max">До</label>
+                            <input id="max" name="max" placeholder="15 000" type="text">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li>
+                                <p>
+                                    <input id="adaptive" name="grid" type="radio" checked>
+                                    <label for="adaptive">Адаптивная</label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <input id="static" name="grid" type="radio">
+                                    <label for="static">Фиксированная</label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <input id="fluid" name="grid" type="radio">
+                                    <label for="fluid">Резиновая</label>
+                                </p>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Особенности:</legend>
+                        <ul>
+                            <li>
+                                <p>
+                                    <input id="slider" name="slider" type="checkbox">
+                                    <label for="slider">Слайдер</label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <input id="advantages" name="advantages" type="checkbox">
+                                    <label for="advantages">Блок преимуществ</label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <input id="news" name="news" type="checkbox">
+                                    <label for="news">Новости</label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <input id="gallery" name="gallery" type="checkbox">
+                                    <label for="gallery">Галерея</label>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <input id="bucket" name="bucket" type="checkbox">
+                                    <label for="bucket">Корзина</label>
+                                </p>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit">Показать</button>
+                </form>      
+            </section>
+
             <section>
+                <h2>Каталог</h2>
+
+                <div>
+                    <span>Сортировать:</span>
+                    <a href="">по цене</a>
+                    <a href="">по типу</a>
+                    <a href="">по названию</a>
+                    <a href="">по убыванию</a>
+                    <a href="">по возрастанию</a>
+                </div>
                 <ul>
                     <li>
                         <div>
@@ -47,8 +140,8 @@
                     </li>
                     <li>
                         <div>
-                            <h3>Sedona</h3>
-                            <p>Информационный сайт для туристов</p>
+                            <h3>Pink app</h3>
+                            <p>Продуктовый лендинг приложения для iOS и Android</p>
                             <a href="">9 900 руб.</a>
                         </div>
                         <div>
@@ -62,8 +155,8 @@
                     </li>
                     <li>
                         <div>
-                            <h3>Sedona</h3>
-                            <p>Информационный сайт для туристов</p>
+                            <h3>Barbershop</h3>
+                            <p>Сайт салона красоты. Для мужчин, да.</p>
                             <a href="">9 900 руб.</a>
                         </div>
                         <div>
@@ -77,8 +170,8 @@
                     </li>
                     <li>
                         <div>
-                            <h3>Sedona</h3>
-                            <p>Информационный сайт для туристов</p>
+                            <h3>Mishka</h3>
+                            <p>Интернет-магазин вязаных игрушек</p>
                             <a href="">9 900 руб.</a>
                         </div>
                         <div>
@@ -92,8 +185,8 @@
                     </li>
                     <li>
                         <div>
-                            <h3>Sedona</h3>
-                            <p>Информационный сайт для туристов</p>
+                            <h3>A plus</h3>
+                            <p>Лендинг курсов повышения квалификации</p>
                             <a href="">9 900 руб.</a>
                         </div>
                         <div>
@@ -107,8 +200,8 @@
                     </li>
                     <li>
                         <div>
-                            <h3>Sedona</h3>
-                            <p>Информационный сайт для туристов</p>
+                            <h3>Кваст</h3>
+                            <p>Промо-сайт производителя крафтового кваса</p>
                             <a href="">9 900 руб.</a>
                         </div>
                         <div>
@@ -139,21 +232,36 @@
     </main>
 
     <footer>
-    	<section>
-    		<h2>Социальные сети</h2>
-
-    		<ul>
-    			<li><a href="">Вконтакте</a></li>
-    			<li><a href="">Фейзбук</a></li>
-    			<li><a href="">Инстаграм</a></li>
-    		</ul>
-    	</section>
-
+		<ul>
+			<li><a href="">Вконтакте</a></li>
+			<li><a href="">Фейзбук</a></li>
+			<li><a href="">Инстаграм</a></li>
+		</ul>
     	<p>
     		Давайте дружить, это выгодно!
     		<span>Скидка 10% для друзей из социальных сетей.</span>
     	</p>
     </footer>
+
+    <div>
+        <h2>Напишите нам</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label for="">Ваше имя:</label>
+                <input type="text" placeholder="Имя Фамилия">
+            </p>
+            <p>
+                <label for="">Ваш email:</label>
+                <input type="text" placeholder="email@example.com">
+            </p>
+            <p>
+                <label for="">Текст письма:</label>
+                <textarea>В свободной форме</textarea>
+            </p>
+            <button type="submit">Отправить</button>
+            <button type="button">Закрыть</button>
+        </form>
+    </div>
 
   </body>
 </html>
