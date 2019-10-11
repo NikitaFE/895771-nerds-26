@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <header>
-    	<nav>
-    		<a href="index.html">
-    			<img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии 'Нёрдс'">
-    		</a>
-    		<ul>
-    			<li><a href="">Студия</a></li>
-    			<li><a href="">Клиенты</a></li>
-    			<li><a href="">Магазин</a></li>
-    			<li><a href="">Контакты</a></li>
-    		</ul>
-    		<a href="">Корзина</a>
-    	</nav>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a class="header__logo" href="index.html">
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии 'Нёрдс'">
+            </a>
+            <ul class="header__menu">
+                <li><a href="">Студия</a></li>
+                <li><a href="">Клиенты</a></li>
+                <li><a href="">Магазин</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+            <a class="header__cart-link" href="">Корзина</a>
+        </nav>
     </header>
 
     <main>
-    	<h1>Магазин готовых шаблонов</h1>
+        <h1>Магазин готовых шаблонов</h1>
 
-    	<section>
-    		<h2>Шаблоны</h2>
+        <section>
+            <h2 class="visually-hidden">Шаблоны</h2>
 
-    		<section>
-                <h3>Фильтр</h3>
+            <section>
+                <h3 class="visually-hidden">Фильтр</h3>
 
                 <form action="https://echo.htmlacademy.ru" method="get">
                     <fieldset>
@@ -108,11 +112,11 @@
                         </ul>
                     </fieldset>
                     <button type="submit">Показать</button>
-                </form>      
+                </form>
             </section>
 
             <section>
-                <h2>Каталог</h2>
+                <h2 class="visually-hidden">Каталог</h2>
 
                 <div>
                     <span>Сортировать:</span>
@@ -191,44 +195,46 @@
                     </li>
                 </ul>
             </section>
-    	</section>
+        </section>
+    </main>
 
+    <footer>
         <section>
             <h2>Контактная информация</h2>
 
             <img src="img/map-img.png" width="1440" height="416" alt="Как нас найти">
             <div>
                 <h3>Nёrds design studio</h3>
-                <p>191186, Санкт-Петербург, 
-                <br>ул. Б. Конюшенная, д. 19/8</p>
+                <p>191186, Санкт-Петербург,
+                    <br>ул. Б. Конюшенная, д. 19/8</p>
                 <a href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
                 <a href="">Напишите нам</a>
             </div>
         </section>
-    </main>
 
-    <footer>
-		<ul>
-			<li>
-                <a href="">
-                    <span class="visually-hidden">Вконтакте</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span class="visually-hidden">Фейсбук</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <span class="visually-hidden">Инстаграм</span>
-                </a>
-            </li>
-		</ul>
-    	<p>
-    		Давайте дружить, это выгодно!
-    		<span>Скидка 10% для друзей из социальных сетей.</span>
-    	</p>
+        <div class="footer-bottom">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="visually-hidden">Вконтакте</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="visually-hidden">Фейсбук</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="visually-hidden">Инстаграм</span>
+                    </a>
+                </li>
+            </ul>
+            <p>
+                Давайте дружить, это выгодно!
+                <span>Скидка 10% для друзей из социальных сетей.</span>
+            </p>
+        </div>
     </footer>
 
     <div>
@@ -250,6 +256,5 @@
             <button type="button">Закрыть</button>
         </form>
     </div>
-
-  </body>
+</body>
 </html>
