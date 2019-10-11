@@ -172,6 +172,65 @@ a {
 }
 /* /statistics */
 
+/* Catalog */
+.catalog__title {
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+	text-align: center;
+
+	background-color: #eeeeee;
+}
+
+/* Filter */
+.filter__item {
+	border: none;
+}
+
+.filter__item-title {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.filter__options {
+	list-style: none;
+}
+
+.filter__range-text {
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #283136;
+}
+
+.filter__range-value {
+	font: inherit;
+	text-align: center;
+	color: #283136;
+
+	background-color: #eeeeee;
+	border: none;
+}
+
+.filter__options-title {
+	line-height: 20px;
+	color: #283136;
+}
+
+.filter__submit {
+	font: inherit;
+	font-weight: 500;
+	line-height: 18px;
+	text-transform: uppercase;
+
+	background-color: #eeeeee;
+	border: none;
+	cursor: pointer;
+}
+/* /filter */
+/* /catalog */
+
 /* Footer */
 /* Contacts */
 .contacts__info {

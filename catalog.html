@@ -25,18 +25,19 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Магазин готовых шаблонов</h1>
+    <main class="catalog">
+        <h1 class="catalog__title">Магазин готовых шаблонов</h1>
+        
 
         <section>
             <h2 class="visually-hidden">Шаблоны</h2>
 
-            <section>
+            <section class="filter">
                 <h3 class="visually-hidden">Фильтр</h3>
 
                 <form action="https://echo.htmlacademy.ru" method="get">
-                    <fieldset>
-                        <legend>Стоимость:</legend>
+                    <fieldset class="filter__item">
+                        <legend class="filter__item-title">Стоимость:</legend>
                         <div>
                             <div class="range">
                                 <span></span>
@@ -45,73 +46,73 @@
                             </div>
                         </div>
                         <p>
-                            <label for="min">От</label>
-                            <input id="min" name="min" placeholder="0" type="text">
+                            <label class="filter__range-text" for="min">От</label>
+                            <input class="filter__range-value" id="min" name="min" placeholder="0" type="text">
                         </p>
                         <p>
-                            <label for="max">До</label>
-                            <input id="max" name="max" placeholder="15 000" type="text">
+                            <label class="filter__range-text" for="max">До</label>
+                            <input class="filter__range-value" id="max" name="max" placeholder="15 000" type="text">
                         </p>
                     </fieldset>
-                    <fieldset>
-                        <legend>Сетка:</legend>
-                        <ul>
+                    <fieldset class="filter__item">
+                        <legend class="filter__item-title">Сетка:</legend>
+                        <ul class="filter__options">
                             <li>
                                 <p>
                                     <input id="adaptive" name="grid" type="radio" checked>
-                                    <label for="adaptive">Адаптивная</label>
+                                    <label class="filter__options-title" for="adaptive">Адаптивная</label>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <input id="static" name="grid" type="radio">
-                                    <label for="static">Фиксированная</label>
+                                    <label class="filter__options-title" for="static">Фиксированная</label>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <input id="fluid" name="grid" type="radio">
-                                    <label for="fluid">Резиновая</label>
+                                    <label class="filter__options-title" for="fluid">Резиновая</label>
                                 </p>
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
-                        <legend>Особенности:</legend>
-                        <ul>
+                    <fieldset class="filter__item">
+                        <legend class="filter__item-title">Особенности:</legend>
+                        <ul class="filter__options">
                             <li>
                                 <p>
                                     <input id="slider" name="slider" type="checkbox">
-                                    <label for="slider">Слайдер</label>
+                                    <label class="filter__options-title" for="slider">Слайдер</label>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <input id="advantages" name="advantages" type="checkbox">
-                                    <label for="advantages">Блок преимуществ</label>
+                                    <label class="filter__options-title" for="advantages">Блок преимуществ</label>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <input id="news" name="news" type="checkbox">
-                                    <label for="news">Новости</label>
+                                    <label class="filter__options-title" for="news">Новости</label>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <input id="gallery" name="gallery" type="checkbox">
-                                    <label for="gallery">Галерея</label>
+                                    <label class="filter__options-title" for="gallery">Галерея</label>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <input id="bucket" name="bucket" type="checkbox">
-                                    <label for="bucket">Корзина</label>
+                                    <label class="filter__options-title" for="bucket">Корзина</label>
                                 </p>
                             </li>
                         </ul>
                     </fieldset>
-                    <button type="submit">Показать</button>
+                    <button class="filter__submit" type="submit">Показать</button>
                 </form>
             </section>
 
@@ -199,21 +200,23 @@
     </main>
 
     <footer>
-        <section>
-            <h2>Контактная информация</h2>
+        <section class="contacts">
+            <h2 class="visually-hidden">Контактная информация</h2>
 
-            <img src="img/map-img.png" width="1440" height="416" alt="Как нас найти">
-            <div>
-                <h3>Nёrds design studio</h3>
-                <p>191186, Санкт-Петербург,
-                    <br>ул. Б. Конюшенная, д. 19/8</p>
-                <a href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
-                <a href="">Напишите нам</a>
+            <a class="contacts__map" href="">
+                <img src="img/map-img.png" width="1440" height="416" alt="Как нас найти"> 
+            </a>
+            <div class="contacts__info">
+                <h3 class="contacts__info-title">Nёrds design studio</h3>
+                <p class="contacts__info-address">191186, Санкт-Петербург, 
+                <br>ул. Б. Конюшенная, д. 19/8</p>
+                <a class="contacts__info-phone" href="tel:+7(812)275-75-75">тел. +7 (812) 275-75-75</a>
+                <a class="contacts__info-link button" href="">Напишите нам</a>
             </div>
         </section>
 
-        <div class="footer-bottom">
-            <ul>
+        <div class="footer__bottom">
+            <ul class="footer__bottom-social">
                 <li>
                     <a href="">
                         <span class="visually-hidden">Вконтакте</span>
@@ -230,30 +233,34 @@
                     </a>
                 </li>
             </ul>
-            <p>
+            <p class="footer__bottom-title">
                 Давайте дружить, это выгодно!
-                <span>Скидка 10% для друзей из социальных сетей.</span>
+            </p>
+            <p class="footer__bottom-text">
+                Скидка 10% для друзей из социальных сетей.
             </p>
         </div>
     </footer>
 
-    <div>
-        <h2>Напишите нам</h2>
+    <div class="write-us">
+        <h2 class="write-us__title">Напишите нам</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
             <p>
-                <label for="">Ваше имя:</label>
-                <input type="text" placeholder="Имя Фамилия">
+                <label class="write-us__label" for="">Ваше имя:</label>
+                <input class="write-us__field" type="text" placeholder="Имя Фамилия">
             </p>
             <p>
-                <label for="">Ваш email:</label>
-                <input type="text" placeholder="email@example.com">
+                <label class="write-us__label" for="">Ваш email:</label>
+                <input class="write-us__field" type="text" placeholder="email@example.com">
             </p>
             <p>
-                <label for="">Текст письма:</label>
-                <textarea>В свободной форме</textarea>
+                <label class="write-us__label" for="">Текст письма:</label>
+                <textarea class="write-us__field"placeholder="В свободной форме"></textarea>
             </p>
-            <button type="submit">Отправить</button>
-            <button type="button">Закрыть</button>
+            <button class="write-us__submit button" type="submit">Отправить</button>
+            <button class="write-us__close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
         </form>
     </div>
 </body>
