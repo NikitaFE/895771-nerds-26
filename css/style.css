@@ -9,11 +9,35 @@ body {
 	color: #000000;
 }
 
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 a {
   text-decoration: none;
 }
 
+.visually-hidden {
+	display: none;
+}
+
+.container {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
 .button {
+	display: inline-block;
+	padding: 17px 0 15px;
+
 	font: inherit;
 	font-weight: 500;
 	line-height: 18px;
@@ -24,6 +48,7 @@ a {
 
 	background-color: #fb565a;
 	border: none;
+	border-radius: 2px; 
 }
 
 .button:hover,
@@ -69,52 +94,119 @@ a {
 
 /* Header */
 .header__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 83px;
+
 	font-weight: 500;
 	line-height: 30px;
 	text-transform: uppercase;
 	color: #000000;
 }
 
+.header__logo {
+	align-self: flex-start;
+}
+
 .header__menu {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 
-.header__menu a,
+.header__link,
 .header__cart-link {
 	color: #000000;
 }
 
-.header__menu a:hover,
-.header__menu a:focus,
+.header__link:hover,
+.header__link:focus,
 .header__cart-link:hover,
 .header__cart-link:focus {
 	color: #fb565a;
 }
 
-.header__menu a:active,
+.header__link:active,
 .header__cart-link:active {
 	color: rgba(0, 0, 0, 0.3);
+}
+
+li:not(:last-child) .header__link {
+	margin-right: 46px;
 }
 /* /header */
 
 /* Promo */
+.promo {
+	padding-top: 192px;
+	margin-bottom: 80px;
+}
+
+.promo__slide:not(:first-child) {
+	display: none;
+}
+
 .promo__title {
+	margin: 0;
+	margin-bottom: 26px;
+
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
+	white-space: pre-wrap;
+}
+
+.promo__slide:first-child .promo__title {
+	width: 500px;
 }
 
 .promo__text {
+	margin: 0;
+	margin-bottom: 39px;
+
 	color: #283136;
+}
+
+.promo__link {
+	width: 240px;
+	margin-bottom: 80px;
+	padding-right: 2px;
 }
 /* /promo */
 
 /* Services */
+.services {
+	margin-bottom: 73px;
+	padding-bottom: 80px;
+
+	border-bottom: 2px solid #eeeeee;
+}
+
 .services__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 
+.services__item {
+	width: 300px;
+	padding-top: 171px;
+}
+
+.services__item:not(:nth-child(3n)) {
+	margin-right: 100px;
+}
+
 .services__title {
+	margin: 0;
+	margin-bottom: 16px;
+
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 30px;
@@ -122,49 +214,119 @@ a {
 }
 
 .services__text {
+	width: 280px;
+	margin: 0;
+	margin-bottom: 32px;
+
 	color: #283136;
+	white-space: pre-wrap;
+}
+
+.services__link {
+	width: 160px;
 }
 /* /services */
 
+.index-columns {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 73px;
+
+	border-bottom: 2px solid #eeeeee;
+}
+
 /* About */
+.about {
+	width: 660px;
+}
+
 .about__title {
+	margin: 0;
+	margin-bottom: 34px;
+
 	font-weight: 500;
 	font-size: 45px;
 	line-height: 45px;
+	white-space: pre-wrap;
+}
+
+.about__text {
+	margin: 0;
+	margin-bottom: 39px;
 }
 
 .about__text,
 .about__list-item {
+	white-space: pre-wrap;
 	color: #283136;
 }
 
 .about__list-title {
+	margin: 0;
+	margin-bottom: 24px;
+
 	font-weight: 700;
 	text-transform: uppercase;
 }
 
 .about__list {
+	margin: 0;
+	padding: 0;
+	padding-left: 36px;
+
 	list-style: none;
+}
+
+.about__list-item:not(:last-child) {
+	margin-bottom: 24px;
 }
 /* /about */
 
 /* Statistics */
+.statistics {
+	width: 360px;
+	padding-top: 212px;
+
+	text-align: center;
+}
+
 .statistics__list-title {
+	margin: 0;
+	margin-bottom: 40px;
+
 	font-weight: 700;
 	text-transform: uppercase;
 }
 
 .statistics__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+
+	text-align: left;
 	list-style: none;
 }
 
 .statistics__list-item {
+	width: 100px;
+}
+
+.statistics__list-item:not(:nth-child(3n)) {
+	margin-right: 20px;
+}
+
+.statistics__list-item p:first-child {
+	margin: 0;
+	margin-bottom: 19px;
+
 	font-weight: 700;
 	font-size: 45px;
 	line-height: 45px;
 }
 
-.statistics__list-item p {
+.statistics__list-item p:last-child {
+	margin: 0;
+
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 18px;
@@ -307,6 +469,15 @@ a {
 
 /* Footer */
 /* Contacts */
+.contacts__map {
+	width: 100%;
+	max-width: 1440px;
+}
+
+.contacts__map img {
+	width: 100%;
+}
+
 .contacts__info {
 	background-color: #ffffff;
 }

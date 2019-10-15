@@ -10,135 +10,142 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <a class="header__logo" href="index.html">
-                <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии 'Нёрдс'">
-            </a>
-            <ul class="header__menu">
-                <li><a href="">Студия</a></li>
-                <li><a href="">Клиенты</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-            <a class="header__cart-link" href="">Корзина</a>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="header">
+            <nav class="header__nav">
+                <a class="header__logo" href="index.html">
+                    <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии 'Нёрдс'">
+                </a>
+                <ul class="header__menu">
+                    <li><a class="header__link" href="">Студия</a></li>
+                    <li><a class="header__link" href="">Клиенты</a></li>
+                    <li><a class="header__link" href="catalog.html">Магазин</a></li>
+                    <li><a class="header__link" href="">Контакты</a></li>
+                </ul>
+                <a class="header__cart-link" href="">Корзина</a>
+            </nav>
+        </header>
+    </div>
 
-    <main>
+    <main class="main">
         <div class="headding-bg">
-            <h1 class="visually-hidden">Дизайн студия &laquo;Нёрдс&raquo;</h1>
-            
-            <section class="promo">
-                <h2 class="visually-hidden">Промо</h2>
+            <div class="container"> 
+                <h1 class="visually-hidden">Дизайн студия &laquo;Нёрдс&raquo;</h1>
+                
+                <section class="promo">
+                    <h2 class="visually-hidden">Промо</h2>
 
-                <div class="promo__slider">
-                    <div class="promo__slide">
-                        <p class="promo__title">Долго, дорого, скрупулезно.</p>
-                        <p class="promo__text">Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-                        <a class="promo__link button" href="">Узнать больше</a>
+                    <div class="promo__slider">
+                        <div class="promo__slide">
+                            <p class="promo__title">Долго, дорого, скрупулезно.</p>
+                            <p class="promo__text">Математически выверенный дизайн <br>для вашего сайта или мобильного приложения.</p>
+                            <a class="promo__link button" href="">Узнать больше</a>
+                        </div>
+                        <div class="promo__slide">
+                            <p class="promo__title">Любим математику как никто другой</p>
+                            <p class="promo__text">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+                            <a class="promo__link button" href="">Узнать больше</a>
+                        </div>
+                        <div class="promo__slide">
+                            <p class="promo__title">Только ночь, только хардкор</p>
+                            <p class="promo__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                            <a class="promo__link button" href="">Узнать больше</a>
+                        </div>
                     </div>
-                    <div class="promo__slide">
-                        <p class="promo__title">Любим математику как никто другой</p>
-                        <p class="promo__text">Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-                        <a class="promo__link button" href="">Узнать больше</a>
-                    </div>
-                    <div class="promo__slide">
-                        <p class="promo__title">Только ночь, только хардкор</p>
-                        <p class="promo__text">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-                        <a class="promo__link button" href="">Узнать больше</a>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
-        <section class="services">
-            <h2 class="visually-hidden">Сервисы</h2>
+        <div class="container">
+            <section class="services">
+                <h2 class="visually-hidden">Сервисы</h2>
 
-            <ul class="services__list">
-                <li>
-                    <h3 class="services__title">Веб-сайты</h3>
-                    <div></div>
-                    <p class="services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-                    <a class="services__link button" href="">Заказать</a>
-                </li>
-                <li>
-                    <h3 class="services__title">Приложения</h3>
-                    <div></div>
-                    <p class="services__text">Покорите топ-10 приложений в AppStore и Google Play</p>
-                    <a class="services__link button button_color_green" href="">Заказать</a>
-                </li>
-                <li>
-                    <h3 class="services__title">Презентации</h3>
-                    <div></div>
-                    <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
-                    <a class="services__link button button_color_yellow" href="">Заказать</a>
-                </li>
-            </ul>
-        </section>
+                <ul class="services__list">
+                    <li class="services__item">
+                        <h3 class="services__title">Веб-сайты</h3>
+                        <div></div>
+                        <p class="services__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+                        <a class="services__link button" href="">Заказать</a>
+                    </li>
+                    <li class="services__item">
+                        <h3 class="services__title">Приложения</h3>
+                        <div></div>
+                        <p class="services__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+                        <a class="services__link button button_color_green" href="">Заказать</a>
+                    </li>
+                    <li class="services__item">
+                        <h3 class="services__title">Презентации</h3>
+                        <div></div>
+                        <p class="services__text">Вы даже не подозреваете, насколько вы изумительны!</p>
+                        <a class="services__link button button_color_yellow" href="">Заказать</a>
+                    </li>
+                </ul>
+            </section>
 
-        <section class="about">
-            <h2 class="visually-hidden">О нас</h2>
+            <div class="index-columns">
+                <section class="about">
+                    <h2 class="visually-hidden">О нас</h2>
 
-            <p class="about__title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-            <p class="about__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-            <p class="about__list-title">Выполняем заказы на разработку:</p>
-            <ul class="about__list">
-                <li class="about__list-item">Веб-сайтов любой сложности</li>
-                <li class="about__list-item">Мобильных приложений для iOS и Android</li>
-                <li class="about__list-item">Слайдшоу и видео для корпоративных презентаций</li>
-            </ul>
-        </section>
+                    <p class="about__title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+                    <p class="about__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+                    <p class="about__list-title">Выполняем заказы на разработку:</p>
+                    <ul class="about__list">
+                        <li class="about__list-item">Веб-сайтов любой сложности</li>
+                        <li class="about__list-item">Мобильных приложений для iOS и Android</li>
+                        <li class="about__list-item">Слайдшоу и видео для корпоративных презентаций</li>
+                    </ul>
+                </section>
 
-        <section class="statistics">
-            <h2 class="visually-hidden">Немного статистики</h2>
-            
-            <img class="statistics__image" src="img/nerds-illustration.jpg" width="360" height="208" alt="Логотип Нёрдс">
-            <p class="statistics__list-title">с 2004 года любим точность во всем:</p>
-            <ul class="statistics__list">
-                <li class="statistics__list-item">
-                    146<sup>%</sup>
-                    <p>Уровень самоотдачи</p>
-                </li>
-                <li class="statistics__list-item">
-                    100<sup>%</sup>
-                    <p>Соблюдение сроков</p>
-                </li>
-                <li class="statistics__list-item">
-                    50<sup>%</sup>
-                    <p>Минимальная предоплата</p>
-                </li>
-            </ul>
-        </section>
+                <section class="statistics">
+                    <h2 class="visually-hidden">Немного статистики</h2>
+                    
+                    <p class="statistics__list-title">с 2004 года любим точность во всем:</p>
+                    <ul class="statistics__list">
+                        <li class="statistics__list-item">
+                            <p>146</p>
+                            <p>Уровень самоотдачи</p>
+                        </li>
+                        <li class="statistics__list-item">
+                            <p>100</p>
+                            <p>Соблюдение сроков</p>
+                        </li>
+                        <li class="statistics__list-item">
+                            <p>50</p>
+                            <p>Минимальная предоплата</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
 
-        <section>
-            <h2 class="visually-hidden">Наши партнёры</h2>
+            <section>
+                <h2 class="visually-hidden">Наши партнёры</h2>
 
-            <ul>
-                <li>
-                    <a href="https://htmlacademy.ru/intensive/htmlcss">
-                        <img src="img/logo-1.png" width="260" height="180" alt="Сайт академии вёрстки 
-                        HTMLacademy">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/logo-2.png" width="260" height="180" alt="Сайт барбершопа Бороди
-                        нский">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/logo-3.png" width="260" height="180" alt="Сайт приложения Pink">
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="img/logo-4.png" width="260" height="180" alt="Сайт магазина Mishka">
-                    </a>
-                </li>
-            </ul>
-        </section>
+                <ul>
+                    <li>
+                        <a href="https://htmlacademy.ru/intensive/htmlcss">
+                            <img src="img/logo-1.png" width="260" height="180" alt="Сайт академии вёрстки 
+                            HTMLacademy">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/logo-2.png" width="260" height="180" alt="Сайт барбершопа Бороди
+                            нский">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/logo-3.png" width="260" height="180" alt="Сайт приложения Pink">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="img/logo-4.png" width="260" height="180" alt="Сайт магазина Mishka">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer>
