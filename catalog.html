@@ -47,11 +47,11 @@
                         </div>
                         <p>
                             <label class="filter__range-text" for="min">От</label>
-                            <input class="filter__range-value" id="min" name="min" placeholder="0" type="text">
+                            <input class="filter__range-value" id="min" name="min" value="0" type="text">
                         </p>
                         <p>
                             <label class="filter__range-text" for="max">До</label>
-                            <input class="filter__range-value" id="max" name="max" placeholder="15 000" type="text">
+                            <input class="filter__range-value" id="max" name="max" value="15 000" type="text">
                         </p>
                     </fieldset>
                     <fieldset class="filter__item">
@@ -119,82 +119,106 @@
             <section>
                 <h2 class="visually-hidden">Каталог</h2>
 
-                <div>
-                    <span>Сортировать:</span>
-                    <a href="">по цене</a>
-                    <a href="">по типу</a>
-                    <a href="">по названию</a>
-                    <a href=""><span class="visually-hidden">по убыванию</span></a>
-                    <a href=""><span class="visually-hidden">по возрастанию</span></a>
+                <div class="sort">
+                    <span class="sort__title">Сортировать:</span>
+                    <ul class="sort__list">
+                        <li><a class="sort__link active" href="">по цене</a></li>
+                        <li><a class="sort__link" href="">по типу</a></li>
+                        <li><a class="sort__link" href="">по названию</a></li>
+                    </ul>
+                    <ul class="sort__list">
+                        <li><a class="sort__link" href=""><span class="visually-hidden">по убыванию</span></a></li>
+                        <li><a class="sort__link" href=""><span class="visually-hidden">по возрастанию</span></a></li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>
-                        <div>
+                <ul class="products">
+                    <li class="products-item">
+                        <div class="products-item__description">
                             <h3>Sedona</h3>
                             <p>Информационный сайт для туристов</p>
-                            <a href="">9 900 руб.</a>
+                            <a class="button" href="">9 900 руб.</a>
                         </div>
-                        <!-- SVG -->
+                        <svg class="products-item__decoration" viewBox="0 0 360 40">
+                            <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                        </svg>
                         <a href="">
                             <img src="img/img-sedona.jpg" width="360" height="576" alt="">
                         </a>
                     </li>
-                    <li>
-                        <div>
+                    <li class="products-item">
+                        <div class="products-item__description">
                             <h3>Pink app</h3>
                             <p>Продуктовый лендинг приложения для iOS и Android</p>
-                            <a href="">9 900 руб.</a>
+                            <a class="button" href="">9 900 руб.</a>
                         </div>
-                        <!-- SVG -->
+                        <svg class="products-item__decoration" viewBox="0 0 360 40">
+                            <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                        </svg>
                         <a href="">
                             <img src="img/img-pink.jpg" width="360" height="576" alt="">
                         </a>
                     </li>
-                    <li>
-                        <div>
+                    <li class="products-item">
+                        <div class="products-item__description">
                             <h3>Barbershop</h3>
                             <p>Сайт салона красоты. Для мужчин, да.</p>
-                            <a href="">9 900 руб.</a>
+                            <a class="button" href="">9 900 руб.</a>
                         </div>
-                        <!-- SVG -->
+                        <svg class="products-item__decoration" viewBox="0 0 360 40">
+                            <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                        </svg>
                         <a href="">
                             <img src="img/img-barbershop.jpg" width="360" height="576" alt="">
                         </a>
                     </li>
-                    <li>
-                        <div>
+                    <li class="products-item">
+                        <div class="products-item__description">
                             <h3>Mishka</h3>
                             <p>Интернет-магазин вязаных игрушек</p>
-                            <a href="">9 900 руб.</a>
+                            <a class="button" href="">9 900 руб.</a>
                         </div>
-                        <!-- SVG -->
+                        <svg class="products-item__decoration" viewBox="0 0 360 40">
+                            <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                        </svg>
                         <a href="">
                             <img src="img/img-mishka.jpg" width="360" height="576" alt="">
                         </a>
                     </li>
-                    <li>
-                        <div>
+                    <li class="products-item">
+                        <div class="products-item__description">
                             <h3>A plus</h3>
                             <p>Лендинг курсов повышения квалификации</p>
-                            <a href="">9 900 руб.</a>
+                            <a class="button" href="">9 900 руб.</a>
                         </div>
-                        <!-- SVG -->
+                        <svg class="products-item__decoration" viewBox="0 0 360 40">
+                            <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                        </svg>
                         <a href="">
                             <img src="img/img-aplus.jpg" width="360" height="576" alt="">
                         </a>
                     </li>
-                    <li>
-                        <div>
+                    <li class="products-item">
+                        <div class="products-item__description">
                             <h3>Кваст</h3>
                             <p>Промо-сайт производителя крафтового кваса</p>
-                            <a href="">9 900 руб.</a>
+                            <a class="button" href="">9 900 руб.</a>
                         </div>
-                        <!-- SVG -->
+                        <svg class="products-item__decoration" viewBox="0 0 360 40">
+                            <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                        </svg>
                         <a href="">
                             <img src="img/img-kvast.jpg" width="360" height="576" alt="">
                         </a>
                     </li>
                 </ul>
+                <div class="page-numbers">
+                    <ul class="page-numbers__list">
+                        <li><a class="page-numbers__link active" href="">1</a></li>
+                        <li><a class="page-numbers__link" href="">2</a></li>
+                        <li><a class="page-numbers__link" href="">3</a></li>
+                        <li><a class="page-numbers__link" href="">следующая</a></li>
+                    </ul>
+                </div>
             </section>
         </section>
     </main>
