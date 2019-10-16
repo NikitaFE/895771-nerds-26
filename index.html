@@ -117,29 +117,29 @@
                 </section>
             </div>
 
-            <section>
+            <section class="partners">
                 <h2 class="visually-hidden">Наши партнёры</h2>
 
-                <ul>
+                <ul class="partners__list">
                     <li>
-                        <a href="https://htmlacademy.ru/intensive/htmlcss">
+                        <a class="partners__link" href="https://htmlacademy.ru/intensive/htmlcss">
                             <img src="img/logo-1.png" width="260" height="180" alt="Сайт академии вёрстки 
                             HTMLacademy">
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="partners__link" href="">
                             <img src="img/logo-2.png" width="260" height="180" alt="Сайт барбершопа Бороди
                             нский">
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="partners__link" href="">
                             <img src="img/logo-3.png" width="260" height="180" alt="Сайт приложения Pink">
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="partners__link" href="">
                             <img src="img/logo-4.png" width="260" height="180" alt="Сайт магазина Mishka">
                         </a>
                     </li>
@@ -155,7 +155,7 @@
             <a class="contacts__map" href="">
                 <img src="img/map-img.png" width="1440" height="416" alt="Как нас найти"> 
             </a>
-            <div class="contacts__info">
+            <div class="visually-hidden contacts__info">
                 <h3 class="contacts__info-title">Nёrds design studio</h3>
                 <p class="contacts__info-address">191186, Санкт-Петербург, 
                 <br>ул. Б. Конюшенная, д. 19/8</p>
@@ -164,42 +164,47 @@
             </div>
         </section>
 
-        <div class="footer__bottom">
-            <ul class="footer__bottom-social">
-                <li>
-                    <a href="">
-                        <span class="visually-hidden">Вконтакте</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="visually-hidden">Фейсбук</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="visually-hidden">Инстаграм</span>
-                    </a>
-                </li>
-            </ul>
-            <p class="footer__bottom-title">
-                Давайте дружить, это выгодно!
-            </p>
-            <p class="footer__bottom-text">
-                Скидка 10% для друзей из социальных сетей.
-            </p>
+        <div class="container">
+            <div class="footer__bottom">
+                <ul class="footer__bottom-social">
+                    <li>
+                        <a class="footer__link" href="">
+                            <span class="visually-hidden">Вконтакте</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="">
+                            <span class="visually-hidden">Фейсбук</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="">
+                            <span class="visually-hidden">Инстаграм</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer__info">
+                    <p class="footer__bottom-title">
+                        Давайте дружить, это выгодно!
+                    </p>
+                    <p class="footer__bottom-text">
+                        Скидка 10% для друзей из социальных сетей.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <div class="write-us">
+    <div class="visually-hidden write-us">
         <h2 class="write-us__title">Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label class="write-us__label" for="">Ваше имя:</label>
                 <input class="write-us__field" type="text" placeholder="Имя Фамилия">
             </p>
             <p>
-                <label class="write-us__label" for="">Ваш email:</label>
+                <label class="write-us__label" for="">Ваш e-mail:</label>
                 <input class="write-us__field" type="text" placeholder="email@example.com">
             </p>
             <p>
