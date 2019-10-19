@@ -374,6 +374,7 @@ li:not(:last-child) .header__link {
 .templates {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 60px;
 }
 
 /* Filter */
@@ -539,10 +540,21 @@ li:not(:last-child) .header__link {
 
 /* Products */
 .products {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	margin: 0;
+	margin-bottom: 27px;
 	padding: 0;
 
 	list-style: none;
+}
+
+.products-item {
+	display: flex;
+	flex-direction: column;
+	width: 360px;
+	margin-bottom: 33px;
 }
 
 .products-item__decoration {
@@ -551,6 +563,8 @@ li:not(:last-child) .header__link {
 }
 
 .products-item__description {
+	display: none;
+
 	text-align: center;
 
 	background-color: #eeeeee;
@@ -574,20 +588,35 @@ li:not(:last-child) .header__link {
 
 /* Page-numbers */
 .page-numbers__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 
 .page-numbers__link {
+	width: 49px;
+	margin-right: 12px;
+
 	font-weight: 500;
 	line-height: 18px;
 	text-transform: uppercase;
 	color: #000000;
 
 	background-color: #eeeeee;
+	border-radius: 2px;
+}
+
+li:last-child .page-numbers__link {
+	width: 260px;
 }
 
 .page-numbers__link.active {
+	padding: 14px 0 12px; 
+
 	background-color: #ffffff;
+	border: 3px solid #dbdbdb;
 }
 /* /page-numbers */
 /* /catalog */
