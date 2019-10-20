@@ -18,7 +18,7 @@
             <ul class="header__menu">
                 <li><a class="header__link" href="">Студия</a></li>
                     <li><a class="header__link" href="">Клиенты</a></li>
-                    <li><a class="header__link" href="">Магазин</a></li>
+                    <li><a class="header__link active" href="">Магазин</a></li>
                     <li><a class="header__link" href="">Контакты</a></li>
             </ul>
             <a class="header__cart-link" href="">Корзина</a>
@@ -38,11 +38,11 @@
                     <form action="https://echo.htmlacademy.ru" method="get">
                         <fieldset class="filter__item">
                             <legend class="filter__item-title">Стоимость:</legend>
-                            <div class="filter__range">
-                                <div class="range">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                            <div class="range">
+                                <div class="range__field">
+                                    <span class="range__control"></span>
+                                    <span class="range__line"></span>
+                                    <span class="range__control"></span>
                                 </div>
                             </div>
                             <div class="filter__item-lines">
@@ -61,19 +61,19 @@
                             <ul class="filter__options">
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="adaptive" name="grid" type="radio" checked>
+                                        <input class="filter__control visually-hidden" id="adaptive" name="grid" type="radio" checked>
                                         <label class="filter__options-title" for="adaptive">Адаптивная</label>
                                     </p>
                                 </li>
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="static" name="grid" type="radio">
+                                        <input class="filter__control visually-hidden" id="static" name="grid" type="radio">
                                         <label class="filter__options-title" for="static">Фиксированная</label>
                                     </p>
                                 </li>
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="fluid" name="grid" type="radio">
+                                        <input class="filter__control visually-hidden" id="fluid" name="grid" type="radio">
                                         <label class="filter__options-title" for="fluid">Резиновая</label>
                                     </p>
                                 </li>
@@ -84,31 +84,31 @@
                             <ul class="filter__options">
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="slider" name="slider" type="checkbox">
+                                        <input class="filter__control visually-hidden" id="slider" name="slider" type="checkbox" checked>
                                         <label class="filter__options-title" for="slider">Слайдер</label>
                                     </p>
                                 </li>
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="advantages" name="advantages" type="checkbox">
+                                        <input class="filter__control visually-hidden" id="advantages" name="advantages" type="checkbox">
                                         <label class="filter__options-title" for="advantages">Блок преимуществ</label>
                                     </p>
                                 </li>
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="news" name="news" type="checkbox">
+                                        <input class="filter__control visually-hidden" id="news" name="news" type="checkbox">
                                         <label class="filter__options-title" for="news">Новости</label>
                                     </p>
                                 </li>
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="gallery" name="gallery" type="checkbox">
+                                        <input class="filter__control visually-hidden" id="gallery" name="gallery" type="checkbox">
                                         <label class="filter__options-title" for="gallery">Галерея</label>
                                     </p>
                                 </li>
                                 <li>
                                     <p class="filter__item-line">
-                                        <input class="visually-hidden" id="bucket" name="bucket" type="checkbox">
+                                        <input class="filter__control visually-hidden" id="bucket" name="bucket" type="checkbox">
                                         <label class="filter__options-title" for="bucket">Корзина</label>
                                     </p>
                                 </li>
@@ -143,7 +143,7 @@
                                 <a class="button" href="">9 900 руб.</a>
                             </div>
                             <svg class="products-item__decoration" viewBox="0 0 360 40">
-                                <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                                <path d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
                             </svg>
                             <img src="img/img-sedona.jpg" width="360" height="576" alt="">
                         </li>
@@ -156,7 +156,7 @@
                                 <a class="button" href="">9 900 руб.</a>
                             </div>
                             <svg class="products-item__decoration" viewBox="0 0 360 40">
-                                <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                                <path d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
                             </svg>
                             <img src="img/img-pink.jpg" width="360" height="576" alt="">
                         </li>
@@ -169,7 +169,7 @@
                                 <a class="button" href="">9 900 руб.</a>
                             </div>
                             <svg class="products-item__decoration" viewBox="0 0 360 40">
-                                <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                                <path d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
                             </svg>
                             <img src="img/img-barbershop.jpg" width="360" height="576" alt="">
                         </li>
@@ -182,7 +182,7 @@
                                 <a class="button" href="">9 900 руб.</a>
                             </div>
                             <svg class="products-item__decoration" viewBox="0 0 360 40">
-                                <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                                <path d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
                             </svg>
                             <img src="img/img-mishka.jpg" width="360" height="576" alt="">
                         </li>
@@ -195,7 +195,7 @@
                                 <a class="button" href="">9 900 руб.</a>
                             </div>
                             <svg class="products-item__decoration" viewBox="0 0 360 40">
-                                <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                                <path d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
                             </svg>
                             <img src="img/img-aplus.jpg" width="360" height="576" alt="">
                         </li>
@@ -208,7 +208,7 @@
                                 <a class="button" href="">9 900 руб.</a>
                             </div>
                             <svg class="products-item__decoration" viewBox="0 0 360 40">
-                                <path fill="#4D4D4D" d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
+                                <path d="M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z"/>
                             </svg>
                             <img src="img/img-kvast.jpg" width="360" height="576" alt="">
                         </li>
@@ -233,7 +233,7 @@
             <a class="contacts__map" href="">
                 <img src="img/map-img.png" width="1440" height="416" alt="Как нас найти"> 
             </a>
-            <div class="visually-hidden contacts__info">
+            <div class="contacts__info">
                 <h3 class="contacts__info-title">Nёrds design studio</h3>
                 <p class="contacts__info-address">191186, Санкт-Петербург, 
                 <br>ул. Б. Конюшенная, д. 19/8</p>
