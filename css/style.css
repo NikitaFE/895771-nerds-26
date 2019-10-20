@@ -93,9 +93,21 @@ a {
 }
 
 /* Header */
+.header {
+	position: absolute;
+	top: 49px;
+	left: 50%;
+
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	transform: translateX(-50%);
+}
+
 .header__nav {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 	height: 83px;
 
@@ -106,6 +118,8 @@ a {
 }
 
 .header__logo {
+	margin-right: 201px;
+
 	align-self: flex-start;
 }
 
@@ -113,7 +127,9 @@ a {
 	display: flex;
 	justify-content: space-between;
 	margin: 0;
+	margin-right: 285px;
 	padding: 0;
+	padding-bottom: 2px;
 
 	list-style: none;
 }
@@ -121,6 +137,25 @@ a {
 .header__link,
 .header__cart-link {
 	color: #000000;
+}
+
+.header__cart-link {
+	position: relative;
+
+	padding-bottom: 2px;
+}
+
+.header__cart-link::before {
+	content: '';
+	position: absolute;
+	top: 7px;
+    left: -39px;
+
+	width: 15px;
+	height: 15px;
+
+	background-image: url(../img/cart-icon.svg);
+	background-repeat: no-repeat;
 }
 
 .header__link:hover,
@@ -144,13 +179,46 @@ li:not(:last-child) .header__link {
 .promo {
 	padding-top: 192px;
 	margin-bottom: 80px;
+	overflow: hidden;
 }
 
-.promo__slide:not(:first-child) {
+.promo__slider {
+	position: relative;
+}
+
+.promo__slide {
+	position: relative;
+
 	display: none;
 }
 
+.promo__slide::after {
+	content: '';
+	position: absolute;
+	right: 3px;
+	bottom: 0px;
+
+	width: 760px;
+	height: 431px;
+}
+
+.promo__slide:first-of-type::after {
+	background-image: url(../img/nerds-index-slide1.png);
+	background-repeat: no-repeat;
+}
+
+.promo__slide:nth-of-type(2)::after {
+	background-image: url(../img/nerds-index-slide2.png);
+	background-repeat: no-repeat;
+}
+
+.promo__slide:nth-of-type(3)::after {
+	background-image: url(../img/nerds-index-slide3.png);
+	background-repeat: no-repeat;
+}
+
 .promo__title {
+	width: 520px;
 	margin: 0;
 	margin-bottom: 26px;
 
@@ -160,14 +228,12 @@ li:not(:last-child) .header__link {
 	white-space: pre-wrap;
 }
 
-.promo__slide:first-child .promo__title {
-	width: 500px;
-}
-
 .promo__text {
+	width: 420px;
 	margin: 0;
 	margin-bottom: 39px;
 
+	white-space: pre-wrap;
 	color: #283136;
 }
 
@@ -175,6 +241,56 @@ li:not(:last-child) .header__link {
 	width: 240px;
 	margin-bottom: 80px;
 	padding-right: 2px;
+}
+
+.promo__controls {
+	position: absolute;
+	bottom: 96px;
+    left: 50%;
+
+	display: flex;
+
+	transform: translateX(-50%);
+}
+
+.promo__control {
+	position: relative;
+
+	display: block;
+	width: 18px;
+	height: 18px;
+
+	background-color: #ffffff;
+	border-radius: 50%;
+}
+
+.promo__control::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	display: none;
+	width: 8px;
+	height: 8px;
+
+	border: 2px solid #c2c2c2;
+	border-radius: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.promo__control:not(:last-child) {
+	margin-right: 17px;
+}
+
+input#first:checked ~ .promo__controls > .promo__control:nth-child(1)::before,
+input#second:checked ~ .promo__controls > .promo__control:nth-child(2)::before,
+input#third:checked ~ .promo__controls > .promo__control:nth-child(3)::before,
+input#first:checked ~ .promo__slide:nth-of-type(1),
+input#second:checked ~ .promo__slide:nth-of-type(2),
+input#third:checked ~ .promo__slide:nth-of-type(3) {
+	display: block;
 }
 /* /promo */
 
@@ -195,8 +311,35 @@ li:not(:last-child) .header__link {
 }
 
 .services__item {
+	position: relative;
+
 	width: 300px;
 	padding-top: 171px;
+}
+
+.services__item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 300px;
+	height: 146px;
+}
+
+.services__item:first-child::before {
+	background-image: url(../img/illustration-1.jpg);
+	background-repeat: no-repeat;
+}
+
+.services__item:nth-child(2)::before {
+	background-image: url(../img/illustration-2.jpg);
+	background-repeat: no-repeat;
+}
+
+.services__item:nth-child(3)::before {
+	background-image: url(../img/illustration-3.jpg);
+	background-repeat: no-repeat;
 }
 
 .services__item:not(:nth-child(3n)) {
@@ -261,6 +404,22 @@ li:not(:last-child) .header__link {
 	color: #283136;
 }
 
+.about__list-item {
+	position: relative;
+}
+
+.about__list-item::before {
+	content: '';
+	position: absolute;
+	top: 11px;
+    left: -35px;
+
+	width: 25px;
+	height: 2px;
+
+	background-color: #fb565a;
+}
+
 .about__list-title {
 	margin: 0;
 	margin-bottom: 24px;
@@ -284,10 +443,25 @@ li:not(:last-child) .header__link {
 
 /* Statistics */
 .statistics {
+	position: relative;
+
 	width: 360px;
 	padding-top: 212px;
 
 	text-align: center;
+}
+
+.statistics::before {
+	content: '';
+	position: absolute;
+	top: -33px;
+	left: 0;
+
+	width: 360px;
+	height: 208px;
+
+	background-image: url(../img/nerds-illustration.jpg);
+	background-repeat: no-repeat;
 }
 
 .statistics__list-title {
@@ -315,13 +489,29 @@ li:not(:last-child) .header__link {
 	margin-right: 20px;
 }
 
-.statistics__list-item p:first-child {
+.statistics__percent {
+	position: relative;
+
 	margin: 0;
 	margin-bottom: 19px;
 
 	font-weight: 700;
 	font-size: 45px;
 	line-height: 45px;
+}
+
+.statistics__percent::after {
+	content: '%';
+	position: absolute;
+	top: 0;
+    right: 3px;
+
+	font-size: 27px;
+	line-height: 27px;
+}
+
+li:last-child .statistics__percent::after {
+	right: 30px;
 }
 
 .statistics__list-item p:last-child {
@@ -354,6 +544,8 @@ li:not(:last-child) .header__link {
 	display: block;
 	width: 260px;
 	height: 180px;
+
+	opacity: 0.2;
 }
 /* /partners */
 
@@ -623,7 +815,13 @@ li:last-child .page-numbers__link {
 
 /* Footer */
 /* Contacts */
+.contacts {
+	position: relative;
+}
+
 .contacts__map {
+	position: relative;
+
 	display: block;
 	width: 100%;
 	max-width: 1440px;
@@ -631,11 +829,28 @@ li:last-child .page-numbers__link {
 	margin-bottom: 69px;
 }
 
+.contacts__map::after {
+	content: '';
+	position: absolute;
+	top: 90px;
+    right: 389px;
+
+	width: 367px;
+	height: 190px;
+
+	background-image: url(../img/map-marker.png);
+	background-repeat: no-repeat;
+}
+
 .contacts__map img {
 	width: 100%;
 }
 
 .contacts__info {
+	position: absolute;
+	top: 54px;
+    left: 140px;
+
 	width: 319px;
 	padding: 49px 50px 47px;
 
@@ -693,6 +908,8 @@ li:last-child .page-numbers__link {
 }
 
 .footer__link {
+	position: relative;
+
 	display: block;
 	width: 79px;
 	height: 79px;
@@ -701,8 +918,42 @@ li:last-child .page-numbers__link {
 	border-radius: 50%;
 }
 
+.footer__link::before {
+	content: '';
+	position: absolute;
+
+	background-repeat: no-repeat;
+}
+
 li:not(:last-child) .footer__link {
 	margin-right: 12px;
+}
+
+li:nth-child(1) .footer__link::before {
+	top: 32px;
+    left: 27px;
+
+	width: 26px;
+	height: 15px;
+	background-image: url(../img/vk-icon.svg);
+}
+
+li:nth-child(2) .footer__link::before {
+	top: 28px;
+    left: 34px;
+
+	width: 12px;
+	height: 22px;
+	background-image: url(../img/fb-icon.svg);
+}
+
+li:nth-child(3) .footer__link::before {
+	top: 29px;
+    left: 28px;
+
+	width: 21px;
+	height: 21px;
+	background-image: url(../img/insta-icon.svg);
 }
 
 .footer__bottom-title {
