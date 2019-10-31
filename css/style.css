@@ -1376,3 +1376,53 @@ p:nth-child(3) .write-us__field {
 	cursor: pointer;
 }
 /* /write-us */
+
+.show {
+	display: block;
+
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    top: -2000px;
+  }
+
+  70% {
+    top: 55%;
+  }
+
+  90% {
+    top: 48%;
+  }
+
+  100% {
+    top: 50%;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    left: 50%;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    left: 48%;
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    left: 52%;
+  }
+}
